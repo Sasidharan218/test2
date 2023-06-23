@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const Interest = (p,r,t) => {
+        let si,ci;
+        si= (p*r*t)/100
+        ci = p*Math.pow((1+r/100),t)
+        console.log("SImple Interest",si)
+        console.log("Compund Interest",ci)
+
+    }
+
+    const p = prompt("Enter p")
+    const r = prompt("Enter r")
+    const t = prompt("Enter t")
+    Interest(p,r,t)
+</script>
+</html>

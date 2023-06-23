@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function permute(a, l, r) {
+  if (l === r) {
+    console.log(a);
+  } else {
+    for (let i = l; i <= r; i++) {
+      st=swapChars(a, l, i);
+      permute(a, l + 1, r);
+      st= swapChars(a, l, i);
+    }
+  }
+}
+
+function swapChars(a, i, j) {
+  const charArray = str.split('');
+  let temp = a[i];
+  a[i] = a[j];
+  a[j] = temp;
+}
+
+let str = prompt("Enter a string:");
+let n = str.length;
+permute(str, 0, n - 1);
+
+</script>
+</html>

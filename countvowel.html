@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+</body>
+<script>
+    const vowelcount = (sptr) => {
+        let count = 0;
+
+        while(sptr !== '')
+        {
+            if(sptr[0] === 'a' || sptr[0] === 'e' || sptr[0] === 'i' || sptr[0] === 'o' || sptr[0] === 'u'){
+                count++;
+            }
+            sptr = sptr.slice(1);
+        }
+        return count;
+    }
+
+        let str = prompt("Enter string:");
+
+        document.getElementById("result").innerHTML= ("Vowel count : " + vowelcount(str))
+</script>
+</html>

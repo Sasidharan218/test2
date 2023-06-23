@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+
+const Fibonacci = (n) => {
+  console.log("Fibonacci Series:");
+  
+  let t1 = 0;
+  let t2 = 1;
+  
+  console.log(t1);
+  console.log(t2);
+  
+  for (let i = 1; i <= n; ++i) {
+    let next = t1 + t2;
+    console.log(next);
+    
+    t1 = t2;
+    t2 = next;
+  }
+   
+};
+
+const n = prompt("enter")
+
+Fibonacci(n)
+
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   function findMostOccurredElement(arr) {
+  const frequencyMap = new Map();
+
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    if (frequencyMap.has(element)) {
+      frequencyMap.set(element, frequencyMap.get(element) + 1);
+    } else {
+      frequencyMap.set(element, 1);
+    }
+  }
+
+  let maxCount = 0;
+  let mostOccurredElement;
+
+ 
+  frequencyMap.forEach((count, element) => {
+    if (count > maxCount) {
+      maxCount = count;
+      mostOccurredElement = element;
+    }
+  });
+
+  return mostOccurredElement;
+}
+
+const arr = [1, 2, 3, 2, 2, 4, 2, 2, 5];
+const mostOccurredElement = findMostOccurredElement(arr);
+
+console.log('Most occurred element in the array:', mostOccurredElement);
+
+</script>
+</html>

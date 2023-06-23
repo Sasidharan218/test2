@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function countCharacterFrequency(str) {
+  const frequency = {};
+  
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    if (frequency[char]) {
+      frequency[char]++;
+    } else {
+      frequency[char] = 1;
+    }
+  }
+  
+  return frequency;
+}
+
+
+const inputString = prompt('Enter the string:');
+const charFrequency = countCharacterFrequency(inputString);
+
+console.log('Character Frequency:');
+for (let char in charFrequency) {
+  console.log(`${char}: ${charFrequency[char]}`);
+}
+
+</script>
+</html>
